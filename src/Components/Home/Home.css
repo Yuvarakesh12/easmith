@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+@import "~slick-carousel/slick/slick.css"; 
+@import "~slick-carousel/slick/slick-theme.css";
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.button-plants {
+    background-color: #165315;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-right: 10px;
+    width: 120px;
+    font-weight: 600;
+}
+
+.button-posts {
+    background-color: white;
+    color: grey;
+    border: 1px solid grey;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 120px;
+    font-weight: 600;
+}
+
+.buttons-container {
+    padding: 20px;
+    margin-left: 10px;
+}
+
+.description {
+    margin: 30px;
+}
+
+.Nursery {
+    padding-left: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.slider-container {
+    position: relative; /* Ensure the buttons are positioned relative to this container */
+    margin: 20px;
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease; /* Add transition for smooth scaling */
+}
+
+.item.slick-center {
+    transform: scale(1.1); /* Scale up the centered item */
+}
+
+.image {
+    width: 100px; /* Default width for larger screens */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.text {
+    font-size: 10px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Adjust responsiveness for smaller screens */
+@media (max-width: 768px) {
+    .image {
+        width: 150px; /* Bigger image for mobile view */
+    }
+}
+
+.slider-button {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust position */
+    z-index: 1; /* Ensure buttons are above the slider */
+}
+
+.slider-button.left {
+    left: 10px; /* Position on the left */
+    background-color: gray;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+}
+
+.slider-button.right {
+    right: 10px; /* Position on the right */
+    background-color: gray;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+}

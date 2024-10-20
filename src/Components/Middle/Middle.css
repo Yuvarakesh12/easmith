@@ -1,0 +1,220 @@
+.main-container {
+    display: flex;
+    width: 100%;
+}
+
+.left-container {
+    width: 25%; /* Set to 30% */
+    background-color: #F0FFE5;
+    padding: 20px;
+    margin: 20px;
+    height: 520px;
+}
+
+.right-container {
+    width: 75%; /* Set to 70% */
+}
+
+.right-container > div {
+    display: flex; /* Change to flex to arrange items in a row */
+    flex-wrap: wrap; /* Allow items to wrap onto the next line if needed */
+    gap: 70px; /* Add space between items */
+    padding: 10px;
+}
+
+.clear-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.clearall {
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.filter-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.add-icon {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.product-info {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    margin-top: 20px; /* Add margin for spacing */
+}
+
+.sort-dropdown {
+    padding: 5px 10px; /* Adjust padding for a smaller size */
+    border: none; /* Remove border */
+    background-color: #165315; /* Button color */
+    color: white; /* Default text color */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 16px; /* Font size */
+    width: 120px; /* Set a specific width */
+    margin-left: 10px; /* Space on the left */
+}
+
+.sort-dropdown:focus {
+    outline: none; /* Remove focus outline */
+    color: white; /* Keep text color white on focus */
+}
+
+/* Change color of options in dropdown */
+.sort-dropdown option {
+    color: white; /* Set option text color to white */
+    background-color: #165315; /* Match dropdown background */
+}
+
+.options {
+    color: white; /* Ensure option text color is white */
+}
+
+.image-container {
+    border: 1px solid black; /* Border thickness and color */
+    width: 220px; /* Makes the border fit the image */
+    position: relative; /* Enable absolute positioning for buttons */
+    margin-left: 20px;
+}
+
+.card-image {
+    height: 200px;
+    width: 200px;
+}
+
+.attached-button {
+    background-color: #144D14;
+    width: 100%; /* Makes the button full width */
+    border: none; /* Optional: remove default border */
+    padding: 10px; /* Optional: adds padding */
+    color: white; /* Optional: sets text color */
+    cursor: pointer; /* Optional: changes cursor on hover */
+}
+
+.love-button {
+    background: none; /* No background */
+    border: none; /* No border */
+    font-size: 24px; /* Size of the heart icon */
+    position: absolute; /* Positioning for the love button */
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    cursor: pointer; /* Pointer on hover */
+    color: black; /* Default color */
+}
+
+.rating-container {
+    display: flex;
+    align-items: center; /* Aligns items vertically */
+}
+
+.image-rating {
+    width: 100px;
+    height: auto; /* Adjust height to maintain aspect ratio */
+    margin-right: 10px; /* Optional: space between image and text */
+}
+
+.rating {
+    font-size: 1.5em; /* Adjust size as needed */
+    margin: 0; /* Remove default margin */
+}
+
+.price-container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.price-old {
+    margin: 0;
+    text-decoration: line-through; /* Strikethrough effect */
+}
+
+.price-new {
+    margin: 0;
+    margin-left: 20px;
+}
+
+.itop {
+    font-size: 10px;
+}
+
+.button {
+    width: 100px; /* Set a fixed width */
+    height: 30px; /* Set a fixed height */
+    cursor: pointer;
+    font-size: 10px;
+    border-radius: 5px; /* Optional: rounded corners */
+    margin: 5px; /* Optional: spacing between buttons */
+}
+
+.add-to-cart-button {
+    background-color: #144D14;
+    color: white;
+    border: none;
+}
+
+.buy-on-rent-button {
+    background-color: transparent;
+    color: #144D14;
+    border: 2px solid #144D14;
+}
+
+/* Optional: Add hover effects */
+.add-to-cart-button:hover {
+    opacity: 0.8;
+}
+
+.buy-on-rent-button:hover {
+    background-color: rgba(0, 128, 0, 0.1);
+}
+
+.image-below {
+    margin-left: 20px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Center the button horizontally */
+    margin-top: 20px;
+}
+
+.view-more-button {
+    background-color: #144D14; /* Green background */
+    color: white; /* White text */
+    border: none; /* Remove default border */
+    border-radius: 50px; /* Rounded corners */
+    padding: 10px 20px; /* Padding for size */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s; /* Smooth background color transition */
+    width: 150px;
+}
+
+.view-more-button:hover {
+    background-color: #144D14; /* Darker green on hover */
+}
+
+/* Media query for responsive design */
+@media (max-width: 768px) {
+    .left-container {
+        display: none; /* Hide the left container */
+    }
+
+    .right-container {
+        width: 100%; /* Full width for right container */
+        display: flex; /* Use flexbox for alignment */
+        justify-content: center; /* Center products horizontally */
+        flex-direction: column; /* Stack products vertically */
+        align-items: center; /* Center items in the column */
+    }
+
+    .right-container > div {
+        flex-direction: column; /* Ensure items stack vertically */
+        align-items: center; /* Center individual product items */
+        gap: 20px; /* Adjust spacing between items */
+    }
+}

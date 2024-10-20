@@ -1,0 +1,68 @@
+/* SuccessModal.css */
+.success-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+.success-modal-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.success-modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    height: 430px; /* Fixed height */
+    width: 400px;  /* Fixed width for larger screens */
+    overflow: auto; /* Allows for scrolling if content overflows */
+}
+
+/* Responsive styles */
+@media (max-width: 480px) {
+    .success-modal-content {
+        width: 90%; /* Adjust width for small screens */
+        height: auto; /* Allow height to adjust based on content */
+    }
+    
+    .closer {
+        width: 100%; /* Make button full width */
+        margin: 10px 0; /* Add margin for spacing */
+    }
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.ok-button {
+    margin-top: 20px;
+}
+
+.closer {
+    background-color: #165315;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-right: 10px;
+    width: 200px;
+    font-weight: 600;
+}
